@@ -8,6 +8,8 @@ Base QMK checkout is needed befory checking out this repo. https://github.com/qm
 Then add this keyabord settings by hand.
 Not forking QMK as I have no intention to make a pull request.
 
+    ln -s ../../qmk_firmware/keyboards/custom custom
+
 Make example for this keyboard (after setting up your build environment):
 
     qmk compile -kb custom/lily58/pro -km default
