@@ -5,4 +5,4 @@
 
 #define SPLIT_TRANSPORT_MIRROR
 
-#include "keyboards/mechboards/common/rgb_effects.h"
+#include "keyboards/custom/common/rgb_effects.h"
