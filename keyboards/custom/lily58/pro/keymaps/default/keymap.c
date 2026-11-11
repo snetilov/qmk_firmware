@@ -41,7 +41,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  |  -   |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |LCTRL |   A  |   S  |   D  |   F  |   G  |-------.    ,-------|   H  |   J  |   K  |   L  |   ;  |  '   |
+ * |LCTRL |   A  |   S  |   D  |   F  |   G  |                    |   H  |   J  |   K  |   L  |   ;  |  '   |
+ * |      | LSFT | LGUI | LALT | LCTR |      |-------.    ,-------|      | RCTL | RALT | RGUI | RSFT |      |
  * |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
  * |LShift|   Z  |   X  |   C  |   V  |   B  |-------|    |-------|   N  |   M  |   ,  |   .  |   /  |RS(ENT)|
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -52,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [0] = LAYOUT(
   KC_ESC,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_GRV,
   KC_TAB,   KC_Q,   KC_W,    KC_E,    KC_R,    T_HOLD,                   KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_MINS,
-  KC_LCTL, LGUI_T(KC_A), LSFT_T(KC_S), LALT_T(KC_D), LCTL_T(KC_F), KC_G, KC_H, RCTL_T(KC_J), RALT_T(KC_K), RSFT_T(KC_L), RGUI_T(KC_SCLN), KC_QUOT,
+  KC_LCTL, LSFT_T(KC_A), LGUI_T(KC_S), LALT_T(KC_D), LCTL_T(KC_F), KC_G, KC_H, RCTL_T(KC_J), RALT_T(KC_K), RGUI_T(KC_L), RSFT_T(KC_SCLN), KC_QUOT,
   KC_LSFT,  KC_Z,   KC_X,    KC_C,    V_HOLD,  B_HOLD, KC_LBRC,  KC_RBRC,  KC_N,    M_HOLD,  KC_COMM, KC_DOT,  KC_SLSH,  RSFT_T(KC_ENT),
                            KC_LALT, KC_LGUI, MO(1), KC_SPC, KC_SPC, MO(2), KC_BSPC, KC_RGUI
 ),
@@ -107,9 +108,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |RGB ON| HUE+ | SAT+ | VAL+ |      |      |-------.    ,-------|      |      |      |      |      |      |
+ * |      |RGB ON| HUE+ | SAT+ | VAL+ |      |-------.    ,-------|      |      |      |      |      |      |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
- * | MODE | HUE- | SAT- | VAL- |      |      |-------|    |-------|      |      |      |      |      |      |
+ * |      | MODE | HUE- | SAT- | VAL- |      |-------|    |-------|      |      |      |      |      |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI |LOWER | /Space  /       \Space \  |RAISE |BackSP| RGUI |
  *                   |      |      |      |/       /         \      \ |      |      |      |
@@ -118,8 +119,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [3] = LAYOUT(
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  RM_TOGG, RM_HUEU, RM_SATU, RM_VALU, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  RM_NEXT, RM_HUED, RM_SATD, RM_VALD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  XXXXXXX, RM_TOGG, RM_HUEU, RM_SATU, RM_VALU, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+  XXXXXXX, RM_NEXT, RM_HUED, RM_SATD, RM_VALD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                              _______, _______, _______, _______, _______,  _______, _______, _______
   )
 };
